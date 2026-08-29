@@ -1,0 +1,87 @@
+DSA Logic Building — Day 03
+🧩 Problem: Counting Repetitions
+
+You have 5 boxes.
+
+You want to put 3 balls into each box.
+
+How many balls do you need in total?
+
+🧠 How to Think
+
+Don't directly calculate:
+
+5 × 3 = 15
+
+Think like a programmer.
+
+We have:
+
+Boxes = 5
+Balls per box = 3
+
+For every box, we add 3 balls.
+
+So the same operation happens 5 times:
+
+0 → 3 → 6 → 9 → 12 → 15
+
+Therefore:
+
+Total balls = 15
+🔍 Logic
+
+The repeated operation is:
+
+Add 3 balls.
+
+And we need to repeat this operation 5 times.
+
+Start
+  ↓
+total = 0
+  ↓
+Repeat 5 times
+  ↓
+total = total + 3
+  ↓
+Print total
+
+This teaches an important programming idea:
+
+A loop can be used to build a result step by step.
+
+Final answer:
+
+15 balls
+☕ Java Code
+public class Main {
+
+    public static void main(String[] args) {
+
+        int total = 0;
+
+        for (int box = 1; box <= 5; box++) {
+            total = total + 3;
+        }
+
+        System.out.println("Total balls: " + total);
+    }
+}
+Output
+Total balls: 15
+💡 DSA Concept Learned
+Repetition + Accumulation
+
+Today you learned that a loop can repeatedly add something to a running total.
+
+total = total + value
+
+This idea is extremely important in DSA because later you'll use the same thinking for:
+
+calculating sums
+counting elements
+finding maximum/minimum
+processing arrays
+frequency counting
+many algorithmic problems
