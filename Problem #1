@@ -1,0 +1,68 @@
+DSA Logic Building — Day 01
+Problem: Repeated Subtraction
+
+You have 10 chocolates. You give 1 chocolate to each friend. If you give chocolates to 7 friends, how many chocolates are left?
+
+🧠 How to Think
+
+We start with:
+
+chocolates = 10
+
+For every friend, we give 1 chocolate:
+
+chocolates = chocolates - 1
+
+This operation needs to happen 7 times.
+
+So we need a loop because the same operation is repeated multiple times.
+
+🔍 Logic
+Start with 10 chocolates.
+Repeat the operation 7 times.
+Each time, subtract 1 chocolate.
+After 7 repetitions, print the remaining chocolates.
+Dry Run
+Initial = 10
+
+Friend 1 → 10 - 1 = 9
+Friend 2 → 9 - 1  = 8
+Friend 3 → 8 - 1  = 7
+Friend 4 → 7 - 1  = 6
+Friend 5 → 6 - 1  = 5
+Friend 6 → 5 - 1  = 4
+Friend 7 → 4 - 1  = 3
+Answer
+3 chocolates
+☕ Java Solution
+public class Main {
+
+    public static void main(String[] args) {
+
+        int chocolates = 10;
+
+        for (int i = 1; i <= 7; i++) {
+            chocolates = chocolates - 1;
+        }
+
+        System.out.println("Remaining chocolates: " + chocolates);
+    }
+}
+Output
+Remaining chocolates: 3
+💡 DSA Concept Learned
+Repetition → Loop
+
+Whenever an operation needs to happen repeatedly, think about using a loop.
+
+In this problem:
+
+Give chocolate
+     ↓
+Decrease count
+     ↓
+Repeat
+     ↓
+Final answer
+
+This is the basic thinking behind many DSA problems.
