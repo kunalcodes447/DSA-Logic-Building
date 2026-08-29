@@ -1,0 +1,78 @@
+Day 02 — Even or Odd
+🧩 Problem
+
+Given a number:
+
+number = 17
+
+Determine whether the number is Even or Odd.
+
+🧠 How to Think
+
+A number is even if it is completely divisible by 2.
+
+For example:
+
+10 ÷ 2 = 5 remainder 0  → Even
+17 ÷ 2 = 8 remainder 1  → Odd
+
+In Java, % gives us the remainder.
+
+Therefore:
+
+number % 2
+
+If the result is 0, the number is even. Otherwise, it is odd.
+
+🔍 Logic
+Start
+  ↓
+Take a number
+  ↓
+Find number % 2
+  ↓
+Is remainder 0?
+  ↓
+ ┌───────────────┐
+Yes             No
+ ↓               ↓
+Even             Odd
+📝 Dry Run
+
+For 17:
+
+17 % 2 = 1
+
+Remainder is not 0.
+
+Therefore:
+
+17 is Odd
+
+☕ Java Code
+public class Main {
+
+    public static void main(String[] args) {
+
+        int number = 17;
+
+        if (number % 2 == 0) {
+            System.out.println("Even");
+        } else {
+            System.out.println("Odd");
+        }
+    }
+}
+
+Output
+Odd
+
+💡 DSA Concept Learned
+
+Condition + Modulo Operator
+
+You learned to:
+
+identify a condition from a real-world rule
+use % to find a remainder
+use if-else to make a decision
